@@ -9,7 +9,7 @@ const forecast = (latitude,longitude,callback) => {
         } else if (body.error) {
             callback(url, undefined)
         } else {
-            callback(undefined, 'It is currently ' + body.current.temperature + " and " + body.current.weather_descriptions[0])
+            callback(undefined, 'It is currently ' + body.current.temperature + " and " + body.current.weather_descriptions[0]+ " but it feels like " + body.current.feelslike )
         }
     })
 }
