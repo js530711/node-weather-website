@@ -30,7 +30,10 @@ weatherForm.addEventListener('submit', (e)=>{
             }
             else {
                 messageOne.textContent = data.location
-                messageTwo.textContent = data.forecast
+                messageTwo.textContent = data.forecast.message
+                document.getElementById("weatherIcon").src = data.forecast.image;
+
+                console.log(data.forecast)
             }
         })
     })
